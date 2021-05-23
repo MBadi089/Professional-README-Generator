@@ -71,8 +71,20 @@ else {
 function generateMarkdown(data) {
   return `# ${data.projectName}
 
-${renderLicenseBadge(data.chooseLicense)}
-${renderLicenseLink(data.chooseLicense)}
+  # Table of Contents
+  - [Installation](#installation)
+  - [License](#license)
+  - [Badges](#badges)
+
+  # Installation
+  ${data.projectInstall}
+
+  # License
+  ${renderLicenseLink(data.chooseLicense)}
+
+  # Badge
+ ${renderLicenseBadge(data.chooseLicense)}
+
 `;
 }
 
