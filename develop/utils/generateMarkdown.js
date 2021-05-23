@@ -7,23 +7,23 @@ if (chooseLicense === 'Apache') {
 }
     //GNU Badge
 else if (chooseLicense === 'GNU') {
-    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;
 }
     //MIT Badge
 else if (chooseLicense === 'MIT') {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
 }
     //IBM Badge
 else if (chooseLicense === 'IBM') {
-    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`;
+    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)]`;
 }
     //Boost Badge
 else if (chooseLicense === 'Boost') {
-    return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+    return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)]`;
 }
     //Eclipse Badge
 else if (chooseLicense === 'Eclipse') {
-    return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+    return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]`;
 }
 else {
     return '';
@@ -55,12 +55,13 @@ else if (chooseLicense === 'Boost') {
 }
     //Eclipse Badge
 else if (chooseLicense === 'Eclipse') {
-    return `[![License](https://opensource.org/licenses/EPL-1.0)`
+    return `[![License](https://opensource.org/licenses/EPL-1.0)`;
 }
 else {
     return '';
 }
 }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -68,7 +69,7 @@ else {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.projectName}
 
 ${renderLicenseBadge(data.chooseLicense)}
 ${renderLicenseLink(data.chooseLicense)}
