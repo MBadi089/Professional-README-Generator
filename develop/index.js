@@ -11,7 +11,7 @@ const questions = [
         type: 'userInput',
         name: 'githubInfo',
         message: 'Please enter your Github Username.',
-        validade: githubInput => {
+        validate: githubInput => {
             if (githubInput) {
                 return true;
             }
@@ -98,7 +98,7 @@ const questions = [
     },
     //Ask the user to choose which license to use for the project
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'chooseLicense',
         message: 'Please choose a license for your project.',
         choices: ['Apache', 'GNU', 'MIT', 'IBM', 'Boost', 'Eclipse'],
@@ -116,7 +116,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(filenName, data, (err) => {
+    fs.writeFile(fileName, data, (err) => {
         if (err)
             throw err;
             console.log('Great! Data transferred to the README!')
